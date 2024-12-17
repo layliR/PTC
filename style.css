@@ -1,0 +1,84 @@
+/* CSS dasar untuk tabel */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 8px 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 14px; /* Mengurangi ukuran font untuk membuatnya lebih kecil */
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px; /* Ukuran font header sedikit lebih besar */
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect untuk baris tabel */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Tombol Cetak */
+button {
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 20px 0;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Tampilan saat dicetak */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .print-area, .print-area * {
+        visibility: visible;
+    }
+    .print-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    button {
+        display: none;
+    }
+}
